@@ -1,8 +1,9 @@
 CC = clang
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -g -Wextra -std=c11
 TARGET = squeeze
 
 all: $(TARGET)
+
 
 $(TARGET): main.o
 	$(CC) $(CFLAGS) -o $@ $^
