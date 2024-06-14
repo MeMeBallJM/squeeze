@@ -16,5 +16,11 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
+    if (access(file_name, R_OK) != 0)
+    {
+        printf("Lacking permission to read file.\n");
+        return 1;
+    }
+
     return 0;
 }
